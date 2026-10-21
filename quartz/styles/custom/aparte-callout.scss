@@ -1,0 +1,35 @@
+@use "../base.scss";
+@use "../variables.scss" as *;
+
+/*---- aparté : commentaire / question à faire ressortir ----*/
+/* couleur distincte des citations : ambre. Un seul réglage : $ac */
+$ac: #c47f3d;
+
+/* inline : ==surlignage== -> souligné ONDULÉ ambre, sans fond jaune */
+mark {
+  background: transparent;
+  color: inherit;
+  text-decoration: underline wavy $ac;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+}
+
+/* bloc : > [!aparte] -> léger, barre gauche ambre, italique (distinct des citations par la couleur) */
+.callout[data-callout="aparte"] {
+  background: transparent;
+  border: none;
+  border-left: 3px solid $ac;
+  --callout-icon: none;
+  padding: 0.2rem 0 0.2rem 1rem;
+  font-style: italic;
+  color: var(--darkgray);
+}
+.callout[data-callout="aparte"] .callout-icon { display: none; }
+.callout[data-callout="aparte"] .callout-title {
+  font-style: normal;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+  color: $ac;
+}
