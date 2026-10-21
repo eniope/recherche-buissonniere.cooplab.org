@@ -1,18 +1,23 @@
 ---
 uid: recherche-buissonniere
-title: "Recherche buissonnière"
-subtitle: "Le tiers secteur de la recherche en Sud Berry/Creuse"
+title: Recherche buissonnière
+subtitle: Le tiers secteur de la recherche en Sud Berry/Creuse
 date: 2026-10-21
 auteur: Stéphane Caillaud
 licence: CC BY-SA 4.0
 type: page d'accueil
 statut: amorce
-draft: true
+draft: false
 description: "Un lieu pour des recherches qui se font hors commande, depuis des vies habitées, à plusieurs signatures : le tiers secteur de la recherche en Sud Berry/Creuse."
-tags: [recherche-buissonniere, tiers-secteur-de-la-recherche, sud-berry-creuse, sciences-participatives]
-chantier: [utopia]
+tags:
+  - recherche-buissonniere
+  - tiers-secteur-de-la-recherche
+  - sud-berry-creuse
+  - sciences-participatives
+chantier:
+  - utopia
 terrain: Sud Berry/Creuse
-résumé: "Page d'accueil du sous-domaine recherche-buissonniere.cooplab.org, ouverte le 21 octobre 2026 comme englobant du tiers secteur de la recherche en Sud Berry/Creuse. Amorce, non publiée."
+résumé: Page d'accueil du sous-domaine recherche-buissonniere.cooplab.org, ouverte le 21 octobre 2026 comme englobant du tiers secteur de la recherche en Sud Berry/Creuse. Amorce, non publiée.
 ---
 
 # Recherche buissonnière
