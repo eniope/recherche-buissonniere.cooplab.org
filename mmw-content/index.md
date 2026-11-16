@@ -26,7 +26,7 @@ résumé: Page d'accueil du sous-domaine recherche-buissonniere.cooplab.org, ét
 
 *Le tiers secteur de la recherche en Sud Berry/Creuse.*
 
-*« Que se passe-t-il quand celles et ceux qui font vivre le territoire décident d'apprendre de leurs pratiques, hier et d'aujourd'hui, ici et d'ailleurs, pour demain ? »*
+*« Que se passe-t-il quand celles et ceux qui font vivre le territoire décident d'apprendre de leurs pratiques, hier et aujourd'hui, ici et ailleurs, pour demain ? »*
 
 **Pour un dialogue lucide science-société s'attachant à cultiver des compagnonnages et des alliances qui rendent capables, depuis nos vies quotidiennes.**
 
