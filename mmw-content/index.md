@@ -79,6 +79,6 @@ résumé: Page d'accueil du sous-domaine recherche-buissonniere.cooplab.org, ét
 
 ---
 
-Voisinage : [cooplab.org](https://cooplab.org) adresse, recherche buissonnière cultive · [these.cooplab.org](https://these.cooplab.org) · [lisieres.cooplab.org](https://lisieres.cooplab.org)
+Voisinages : [cooplab.org](https://cooplab.org) adresse, recherche buissonnière cultive · [these.cooplab.org](https://these.cooplab.org) · [lisieres.cooplab.org](https://lisieres.cooplab.org)
 
 *État du 16 novembre 2026, révisable. CC BY-SA 4.0 · Stéphane Caillaud*
