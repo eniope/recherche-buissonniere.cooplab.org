@@ -26,7 +26,7 @@ résumé: Page d'accueil du sous-domaine recherche-buissonniere.cooplab.org, ét
 
 *Le tiers secteur de la recherche en Sud Berry/Creuse.*
 
-*« Que se passe-t-il quand ceux qui font vivre le territoire décident d'apprendre de leurs pratiques d'hier et d'aujourd'hui, d'ici et d'ailleurs, pour demain ? »*
+*« Que se passe-t-il quand celles et ceux qui font vivre le territoire décident d'apprendre de leurs pratiques, hier et d'aujourd'hui, ici et d'ailleurs, pour demain ? »*
 
 **Pour un dialogue lucide science-société s'attachant à cultiver des compagnonnages et des alliances qui rendent capables, depuis nos vies quotidiennes.**
 
@@ -45,16 +45,16 @@ résumé: Page d'accueil du sous-domaine recherche-buissonniere.cooplab.org, ét
 > > **Pourquoi buissonnière** *(en germe)*
 > > L'école buissonnière, c'est le pas de côté. Le buisson, c'est la haie, donc la lisière : l'endroit où se rencontrent des mondes qui ne se parlent pas toujours. Enquêter ensemble depuis nos vies quotidiennes, sur une page presque blanche mais pas sans repères.
 > >
-> > **Depuis 2018** *(en germe)*
-> > - 2015 : prémisses, une culture pratique de la vie ensemble, détruite
-> > - Octobre 2018 : installation, AG de l'ADAR-CIVAM « Habiter le Boischaut Sud, investir et s'investir : les actions collectives des acteurs locaux »
+> > **Depuis 2015** *(en germe)*
+> > - 2015 : prémisses : "[...une culture pratique de la vie ensemble a été détruite...nous ne sommes pas impuissants, nous sommes réduits à l'impuissance](https://pierrechaillan.wordpress.com/2013/07/15/isabelle-stengers-la-gauche-a-besoin-de-maniere-vitale-que-les-gens-pensent/) "
+> > - Octobre 2018 : installation en Boischaut Sud après avoir été invité à l'AG de l'ADAR-CIVAM « Habiter le Boischaut Sud, investir et s'investir : les actions collectives des acteurs locaux »
 > > - Juillet 2025 : genèse d'un projet de thèse hors-les-murs : « L'évaluation comme milieu réflexif du collectif pensant : vers une épistémologie développementale des sciences citoyennes pratiquées depuis l'infra-ordinaire de nos vies quotidiennes et sociales » ([traces Passerelles](https://passerelles.encommun.io/u/stephane_caillaud/))
 > >
 > > **Le tiers secteur de la recherche** *(en germe)*
 > > Des groupes qui ne se contentent pas de s'adjoindre des chercheurs pour soutenir leur agenda civique : ils portent eux-mêmes une démarche de recherche. Deux postures, praticien réflexif et praticien chercheur, que chacun peut tenir tour à tour ou à la fois.
 > >
 > > **Comment est pensé ce qui s'écrit ici ?** *(en germe)*
-> > À partir d'interactions, de conversations, de transactions, d'échanges… et d'auto-interlocutions.
+> > À partir de tâtonnements, d'interactions, de conversations, de transactions, d'échanges, d'auto-interlocutions,...
 > >
 > > **Les fragments** *(en germe)*
 > > Parcellaire, décousu, daté : chez mon épicier du village, avec un voisin du hameau, et ce que chacun peut décrire de son premier kilomètre.
@@ -70,8 +70,8 @@ résumé: Page d'accueil du sous-domaine recherche-buissonniere.cooplab.org, ét
 > >
 > > **Les dates**
 > > - 16 novembre 2026 : recherche buissonnière s'ouvre
-> > - 17 novembre 2026 : Niort, table ronde « S'engager bénévolement en milieu rural : faire sa place, faire face, faire territoire »
-> > - 20 novembre 2026 : module 1, « Transition écologique juste : une démarche systémique, un enjeu territorial » *(en germe)*
+> > - 17 novembre 2026 : Forum de l'ESS « Faire territoire ensemble » à Niort, table ronde « S'engager bénévolement en milieu rural : faire sa place, faire face, faire territoire » Thématique "Résistances, émancipations"
+> > - 20 novembre 2026 : module 1, « Comprendre les enjeux de son territoire et définir une cause commune » *(en germe)*
 > > - Modules 2 à 4 : 15 décembre 2026, 22 janvier 2027, 5 février 2027 *(en germe)*
 > >
 > > **Les mots en chantier**
