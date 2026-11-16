@@ -501,3 +501,78 @@ sup.fn-tip .fn-tip-content {
 sup.fn-tip:hover .fn-tip-content {
   display: block;
 }
+
+
+/* ================================================= */
+/* ACCUEIL EN CARTE DE CONTENUS (cssclasses: moc)    */
+/* Ajouté le 15/11/2026, à tester en local           */
+/* ================================================= */
+
+/* Accueil : colonne de gauche (Explorer) gardée, colonne de droite masquée */
+@media all and ($desktop) {
+  body[data-slug="index"] .page > #quartz-body {
+    grid-template-columns: #{$sidePanelWidth} minmax(0, 1fr) !important;
+    grid-template-areas:
+      "grid-sidebar-left grid-header"
+      "grid-sidebar-left grid-center"
+      "grid-sidebar-left grid-footer" !important;
+  }
+}
+body[data-slug="index"] .page > #quartz-body > .sidebar.right {
+  display: none !important;
+}
+body[data-slug="index"] .page > #quartz-body .center {
+  max-width: 1080px;
+  width: 100%;
+}
+
+.moc .callout[data-callout="column"] > .callout-content {
+  gap: 1rem;
+}
+.moc .callout[data-callout="column"] > .callout-content > .callout {
+  margin: 0;
+  border-radius: 10px;
+}
+.moc .callout[data-callout-metadata~="wide"] {
+  grid-column: 1 / -1;
+}
+@media all and (max-width: 800px) {
+  .moc .callout[data-callout="column"] > .callout-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.callout[data-callout="bats"] {
+  --color: #5B4A7A;
+  --border: #5B4A7A40;
+  --bg: #5B4A7A14;
+  --callout-icon: var(--callout-icon-abstract);
+}
+
+.moc .callout iframe {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 6px;
+}
+.moc a.moc-miniature {
+  display: block;
+  max-width: 75%;
+  margin: 0 auto;
+  text-decoration: none;
+  border: 1px solid var(--lightgray);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--light);
+}
+.moc a.moc-miniature img {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+.moc a.moc-miniature span {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+}

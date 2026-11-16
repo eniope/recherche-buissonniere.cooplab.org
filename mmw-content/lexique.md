@@ -6,7 +6,7 @@ auteur: Stéphane Caillaud
 licence: CC BY-SA 4.0
 type: lexique
 statut: brouillon
-draft: true
+draft: false
 description: "Des mots que je rencontre et que d'autres emploient aussi, et la question de savoir comment nos vocabulaires s'accordent."
 tags:
   - recherche-buissonniere
