@@ -26,7 +26,9 @@ résumé: Page d'accueil du sous-domaine recherche-buissonniere.cooplab.org, ét
 
 *Le tiers secteur de la recherche en Sud Berry/Creuse.*
 
-**Cultiver des compagnonnages et des alliances qui rendent capables, depuis nos vies quotidiennes.**
+*« Que se passe-t-il quand ceux qui font vivre le territoire décident d'apprendre de leurs pratiques d'hier et d'aujourd'hui, d'ici et d'ailleurs, pour demain ? »*
+
+**Pour un dialogue lucide science-société s'attachant à cultiver des compagnonnages et des alliances qui rendent capables, depuis nos vies quotidiennes.**
 
 *État au 16 novembre 2026.* Cette page montre, à un instant donné, ce qui sera développé ici au fil du vécu. Ce qui a déjà sa page porte un lien ; ce qui n'en a pas encore est marqué *en germe*.
 
@@ -41,25 +43,26 @@ résumé: Page d'accueil du sous-domaine recherche-buissonniere.cooplab.org, ét
 > > ![La rencontre des bibliothèques intérieures, Biganos](https://www.youtube.com/watch?v=uSOKjfoKuIM)
 > >
 > > **Pourquoi buissonnière** *(en germe)*
-> > L'école buissonnière, c'est le pas de côté assumé. Le buisson, c'est la haie, donc la lisière : l'endroit où se rencontrent des mondes qui ne se parlent pas toujours. Enquêter ensemble depuis nos vies quotidiennes, sur une page presque blanche mais pas sans repères.
+> > L'école buissonnière, c'est le pas de côté. Le buisson, c'est la haie, donc la lisière : l'endroit où se rencontrent des mondes qui ne se parlent pas toujours. Enquêter ensemble depuis nos vies quotidiennes, sur une page presque blanche mais pas sans repères.
 > >
 > > **Depuis 2018** *(en germe)*
 > > - 2015 : prémisses, une culture pratique de la vie ensemble, détruite
-> > - Octobre 2018 : installation, AG de l'ADAR « Habiter le Boischaut Sud, investir et s'investir »
-> > - Juillet 2025 : genèse de la thèse et de conversations en lisières ([traces Passerelles](https://passerelles.encommun.io/u/stephane_caillaud/))
-> >
-> > Le fil rouge : *« Que se passe-t-il quand ceux qui font vivre le territoire décident d'apprendre de leurs pratiques d'hier et d'aujourd'hui, d'ici et d'ailleurs, pour demain ? »*
+> > - Octobre 2018 : installation, AG de l'ADAR-CIVAM « Habiter le Boischaut Sud, investir et s'investir : les actions collectives des acteurs locaux »
+> > - Juillet 2025 : genèse d'un projet de thèse hors-les-murs : « L'évaluation comme milieu réflexif du collectif pensant : vers une épistémologie développementale des sciences citoyennes pratiquées depuis l'infra-ordinaire de nos vies quotidiennes et sociales » ([traces Passerelles](https://passerelles.encommun.io/u/stephane_caillaud/))
 > >
 > > **Le tiers secteur de la recherche** *(en germe)*
 > > Des groupes qui ne se contentent pas de s'adjoindre des chercheurs pour soutenir leur agenda civique : ils portent eux-mêmes une démarche de recherche. Deux postures, praticien réflexif et praticien chercheur, que chacun peut tenir tour à tour ou à la fois.
 > >
-> > **Comment on écrit ici** *(en germe)*
-> > Cinq questions avant de fabriquer : engageante, capacitante, performative, évaluative, rétributive. Aujourd'hui, une seule main, qui cumule les postures. CC BY-SA, droit de retrait. Personne n'est nommé sans son accord.
+> > **Comment est pensé ce qui s'écrit ici ?** *(en germe)*
+> > À partir d'interactions, de conversations, de transactions, d'échanges… et d'auto-interlocutions.
+> >
+> > **Les fragments** *(en germe)*
+> > Parcellaire, décousu, daté : chez mon épicier du village, avec un voisin du hameau, et ce que chacun peut décrire de son premier kilomètre.
 >
 > > [!info] Ce qui advient : l'agenda civique de l'automne 2026
 > >
-> > **Comment se crée ce qui se publie ici**
-> > Entre autres, pendant quelques semaines, en suivant le fil de la formation-action [« Réussir la transition écologique juste avec l'économie sociale et solidaire et l'éducation populaire »](https://www.lelabo-ess.org/formation-action-reussir-la-transition-ecologique-juste-avec-l-ess-et-l-education-populaire), dans laquelle trois habitants du Pays de La Châtre en Berry sont impliqués. Elle prolonge l'[étude-action](https://www.lelabo-ess.org/l-education-populaire-au-service-de-la-transition-ecologique-juste) « L'éducation populaire au service de la transition écologique juste » (2024-2025).
+> > **Comment se crée ce qui va se publier ici ?**
+> > À court terme, pendant quelques semaines, cette création va vivre au fil de la formation-action [« Réussir la transition écologique juste avec l'économie sociale et solidaire et l'éducation populaire »](https://www.lelabo-ess.org/formation-action-reussir-la-transition-ecologique-juste-avec-l-ess-et-l-education-populaire), dans laquelle trois habitants du Pays de La Châtre en Berry sont impliqués. Elle prolonge l'[étude-action](https://www.lelabo-ess.org/l-education-populaire-au-service-de-la-transition-ecologique-juste) « L'éducation populaire au service de la transition écologique juste » (2024-2025).
 > >
 > > Comment un dispositif conçu pour circuler de territoire en territoire croise-t-il un lieu qui a sa propre histoire ? La frise rassemble ce qui a rendu cette rencontre possible, sans présenter après coup des trajectoires parallèles comme si elles avaient toujours été coordonnées : une rencontre qui a une histoire, mais dont l'issue n'est pas prédéterminée.
 > >
@@ -73,12 +76,6 @@ résumé: Page d'accueil du sous-domaine recherche-buissonniere.cooplab.org, ét
 > >
 > > **Les mots en chantier**
 > > Le [[lexique]] : tâtonnement, sensible, capabilité, systémique. Des termes déjà rencontrés, retrouvés dans les documents de la formation ; l'enjeu est de voir comment les vocabulaires s'accordent.
-> >
-> > **Les fragments** *(en germe)*
-> > Parcellaire, décousu, daté : chez mon épicier du village, avec un voisin du hameau, et ce que chacun peut décrire de son premier kilomètre.
-> >
-> > **Le fil vers la thèse**
-> > *L'évaluation comme milieu réflexif du collectif pensant : vers une épistémologie développementale des sciences citoyennes pratiquées depuis l'infra-ordinaire de nos vies quotidiennes et sociales.* Ce qui monte en concept va sur [these.cooplab.org](https://these.cooplab.org), une passe après chaque module.
 
 ---
 
