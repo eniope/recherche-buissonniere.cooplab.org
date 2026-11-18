@@ -2,7 +2,7 @@
 <html lang="fr"><head><meta charset="utf-8"><meta http-equiv="Cache-Control" content="no-store">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Une formation-action nationale rencontre la lisière Sud-Berry / Creuse</title>
-<link rel="stylesheet" href="lib/css/timeline.css">
+<link rel="stylesheet" href="lib/css/timeline.css" onerror="this.onerror=null;this.href='https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css'">
 <style>body{margin:0;font-family:Georgia,serif;background:#f9f6f0}
 #header{padding:.8rem 2rem .6rem;border-bottom:1px solid #ddd;background:linear-gradient(90deg,#2F5D8A 0 20%,#6B3FA0 20% 40%,#A8262F 40% 60%,#A8481F 60% 80%,#1F6F77 80%) bottom/100% 5px no-repeat}
 #header h1{margin:0 0 .2rem;font-size:1.25rem;color:#2c2c2c}#header p{margin:0;font-size:.85rem;color:#666}
@@ -83,5 +83,7 @@ function start(){try{
 }catch(e){failed(e.message);}}
 function failed(msg){document.getElementById('timeline-embed').style.display='none';document.getElementById('fallback').style.display='block';if(msg)document.getElementById('fallback').insertAdjacentHTML('beforeend','<p style="color:#c00">'+msg+'</p>');}
 </script>
-<script src="lib/js/timeline.js" onload="start()" onerror="failed('Script timeline.js non chargé.')"></script>
+<!-- Secours : si lib/ local échoue, même bibliothèque depuis le CDN KnightLab (ajout 18/11/2026) -->
+<script>function tlCdn(){var s=document.createElement('script');s.src='https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js';s.onload=start;s.onerror=function(){failed('Script timeline.js non chargé (local ni CDN).')};document.body.appendChild(s);}</script>
+<script src="lib/js/timeline.js" onload="start()" onerror="tlCdn()"></script>
 </body></html>
