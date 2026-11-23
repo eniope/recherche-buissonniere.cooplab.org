@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mallette des 4 fantastiques</title>
+<style>
+/* VOICE everyday, une mallette de travail, sobre et ordonnée
+   IDEA la mallette de formation : une poignée, des tiroirs à onglets, des fiches de bibliothèque
+   PICTURE la mallette dessinée en haut, ses tiroirs colorés qui renvoient aux sections
+   COLOUR blanc, encre bleu nuit, mûre du site pour la mallette, quatre couleurs de tiroirs reprises de l'artefact
+   TYPE pile système sans empattement pour titres, serif système pour le texte (autonome, sans police distante)
+   LAYOUT laptop : titre et mallette côte à côte, puis tiroirs en grille ; téléphone : titre, mallette, tiroirs empilés */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#121019);--ink:light-dark(#17142a,#ece9f4);--soft:light-dark(#5d5872,#a8a2bd);--line:light-dark(#dedbe8,#2e2a3d);--panel:light-dark(#f5f3fa,#1a1724);--mure:light-dark(#5B4A7A,#A594C4);--a1:light-dark(#2350c8,#86a3ff);--a2:light-dark(#a87a06,#e3b851);--a3:light-dark(#6b5ca8,#b0a4e6);--a4:light-dark(#d9481a,#ff8c5e)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:17px/1.55 Georgia,"Times New Roman",serif;overflow-x:clip}
+h1,h2,h3,.k,nav,dt,.btn,.tab{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--mure)}
+.band{padding-block:clamp(24px,4vw,56px);padding-inline:max(5vw,16px)}
+.wrap{max-width:1180px;margin-inline:auto}
+.head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(20px,4vw,48px);align-items:center}
+h1{font-size:clamp(32px,5vw,50px);line-height:1.05;letter-spacing:-.02em;margin:0 0 12px;font-weight:800;text-wrap:balance}
+.lead{margin:0 0 18px;max-width:58ch}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;background:var(--mure);color:var(--bg);font-weight:700;text-decoration:none;font-size:16px}
+.btn:focus-visible,nav a:focus-visible{outline:3px solid var(--a4);outline-offset:3px}
+.case{width:100%;height:auto;display:block}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+nav a{min-height:44px;display:inline-flex;align-items:center;padding:0 14px;border-radius:10px;border:2px solid var(--c);color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+.tiroir{margin-top:clamp(28px,4vw,48px)}
+.tiroir h2{margin:0;border-bottom:4px solid var(--c)}
+.tab{display:inline-block;background:var(--c);color:var(--bg);padding:8px 16px;border-radius:10px 10px 0 0;font-size:clamp(18px,2.4vw,22px);font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:16px;margin-top:16px}
+.f{background:var(--panel);border-radius:12px;padding:18px;border-left:5px solid var(--c)}
+.f h3{margin:4px 0 12px;font-size:18px;line-height:1.25}
+.k{margin:0;font-size:13px;font-weight:700;color:var(--soft)}
+.k-explicite::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--c);margin-right:6px}
+.k-implicite::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;border:2px solid var(--c);margin-right:6px}
+dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 12px;font-size:15px}
+dt{font-weight:700;font-size:13px;color:var(--soft);padding-top:2px}
+dd{margin:0;overflow-wrap:anywhere}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(20px,3vw,40px)}
+h2.sec{font-size:clamp(24px,3vw,30px);line-height:1.1;margin:0 0 12px}
+ul.l{margin:0;padding-left:1.2em;display:grid;gap:8px}
+.alt{background:var(--panel)}
+footer{font-size:14px;color:var(--soft)}
+footer p{margin:0 0 6px;max-width:80ch}
+@media(max-width:760px){.head{grid-template-columns:minmax(0,1fr)}.case{max-width:420px}}
+@media(max-width:420px){dl{grid-template-columns:minmax(0,1fr)}dt{padding-top:6px}}
+</style>
+</head>
+<body>
+<header class="band">
+<div class="wrap head">
+<div>
+<h1>La mallette des 4 fantastiques</h1>
+<p class="lead">Un artefact pour qu'un petit groupe local se regarde coopérer, au regard du modèle de la Fabrique des transitions. Autour de lui, les 13 sources qu'il cite ou qu'il suppose, rangées en quatre tiroirs. Chaque fiche dit qui, quand, où la trouver, sous quelle licence, et ce qu'elle soutient dans l'artefact.</p>
+<a class="btn" href="4-fantastiques.html">Ouvrir l'artefact</a>
+<nav aria-label="Tiroirs"><a href="#modele" style="--c:var(--a1)">Le modèle</a><a href="#cadre" style="--c:var(--a2)">Le cadre de la formation</a><a href="#implicite" style="--c:var(--a3)">Ce qui est dans l&#x27;artefact sans y être nommé</a><a href="#associativite" style="--c:var(--a4)">L&#x27;associativité</a></nav>
+</div>
+<svg class="case" viewBox="0 0 420 300" role="img" aria-label="Une mallette ouverte, quatre tiroirs colorés">
+<rect x="160" y="18" width="100" height="40" rx="14" fill="none" stroke="var(--mure)" stroke-width="12"/>
+<rect x="20" y="52" width="380" height="230" rx="22" fill="var(--mure)"/>
+<rect x="20" y="52" width="380" height="36" rx="22" fill="color-mix(in srgb,var(--mure) 70%,#000)"/>
+<rect x="196" y="78" width="28" height="18" rx="4" fill="var(--bg)"/>
+<g>
+<rect x="44" y="108" width="160" height="72" rx="10" fill="var(--a1)"/><rect x="216" y="108" width="160" height="72" rx="10" fill="var(--a2)"/>
+<rect x="44" y="190" width="160" height="72" rx="10" fill="var(--a3)"/><rect x="216" y="190" width="160" height="72" rx="10" fill="var(--a4)"/>
+<g fill="var(--bg)" opacity=".9"><rect x="104" y="138" width="40" height="8" rx="4"/><rect x="276" y="138" width="40" height="8" rx="4"/><rect x="104" y="220" width="40" height="8" rx="4"/><rect x="276" y="220" width="40" height="8" rx="4"/></g>
+</g>
+</svg>
+</div>
+</header>
+
+<main class="band" id="ressources" style="padding-top:0">
+<div class="wrap">
+<section class="tiroir" id="modele" style="--c:var(--a1)"><h2><span class="tab">Le modèle</span></h2><div class="grid"><article class="f"><p class="k k-explicite">Cité dans l'artefact</p>
+<h3>« Attentes et enjeux croisés des 4 fantastiques pour mieux coopérer »</h3>
+<dl><dt>Auteur</dt><dd>La Fabrique des transitions</dd><dt>Date</dt><dd>date non indiquée sur le schéma</dd><dt>Nature</dt><dd>Schéma</dd><dt>Où la trouver</dt><dd><a href="https://fabriquedestransitions.net/l-education-populaire-au-service-de-la-transition-juste-des-territoires">Volet Fabrique des transitions du cycle</a></dd><dt>Licence</dt><dd>Non indiquée. On pointe la source, on ne dépose pas le schéma.</dd><dt>Ce qu'elle soutient</dt><dd>Le carré de l&#x27;artefact : les quatre figures, leurs attentes, le centre commun.</dd></dl></article><article class="f"><p class="k k-implicite">Implicite dans l'artefact</p>
+<h3>Rapport « Coopérer entre ESS et collectivités », chapitre sur la recherche-action de la Fabrique des transitions</h3>
+<dl><dt>Auteur</dt><dd>Publié sur avise.org</dd><dt>Date</dt><dd>2023</dd><dt>Nature</dt><dd>Rapport</dd><dt>Où la trouver</dt><dd><a href="https://avise.org/sites/default/files/media/document/Rapport_%20Coop%C3%A9rer%20entre%20ESS%20et%20collectivit%C3%A9s_2023%20%281%29.pdf">PDF sur avise.org</a></dd><dt>Licence</dt><dd>Non vérifiée.</dd><dt>Ce qu'elle soutient</dt><dd>Une définition publique des « 4 Fantastiques » : élus, agents des collectivités, acteurs socio-économiques, agents de l&#x27;État.</dd></dl></article></div></section><section class="tiroir" id="cadre" style="--c:var(--a2)"><h2><span class="tab">Le cadre de la formation</span></h2><div class="grid"><article class="f"><p class="k k-explicite">Cité dans l'artefact</p>
+<h3>« L&#x27;éducation populaire au service de la transition écologique juste des territoires », note stratégique</h3>
+<dl><dt>Auteur</dt><dd>Le Labo de l&#x27;ESS et e-graine</dd><dt>Date</dt><dd>juin 2023, 14 p.</dd><dt>Nature</dt><dd>Note</dd><dt>Où la trouver</dt><dd><a href="https://www.lelabo-ess.org/l-education-populaire-au-service-de-la-transition-ecologique-juste">Page du Labo de l&#x27;ESS</a></dd><dt>Licence</dt><dd>Non vérifiée.</dd><dt>Ce qu'elle soutient</dt><dd>La parole qui se détache mal de la fonction ; les freins économique, politique et temporel ; les sept stades d&#x27;engagement d&#x27;e-graine.</dd></dl></article><article class="f"><p class="k k-explicite">Cité dans l'artefact</p>
+<h3>« Retour d&#x27;expériences croisées des territoires »</h3>
+<dl><dt>Auteur</dt><dd>Le Labo de l&#x27;ESS, e-graine, La Fabrique des transitions</dd><dt>Date</dt><dd>octobre 2025, 17 p.</dd><dt>Nature</dt><dd>Rapport d&#x27;étude-action</dd><dt>Où la trouver</dt><dd><a href="https://www.lelabo-ess.org/system/files/2025-10/Retour%20d%27exp%C3%A9riences%20crois%C3%A9es%20des%20territoires_%C3%A9ducation%20populaire_0.pdf">PDF du Labo de l&#x27;ESS</a></dd><dt>Licence</dt><dd>Non vérifiée.</dd><dt>Ce qu'elle soutient</dt><dd>« Ce sont toujours des personnes qui coopèrent, ou pas » (étape 2, p. 6-7) ; le cloisonnement ; la concurrence pour les financements.</dd></dl></article><article class="f"><p class="k k-explicite">Cité dans l'artefact</p>
+<h3>Restitution de l&#x27;étude-action, webinaire</h3>
+<dl><dt>Auteur</dt><dd>Le Labo de l&#x27;ESS, e-graine, La Fabrique des transitions</dd><dt>Date</dt><dd>8 octobre 2025</dd><dt>Nature</dt><dd>Vidéo</dd><dt>Où la trouver</dt><dd><a href="https://www.lelabo-ess.org/l-education-populaire-au-service-de-la-transition-ecologique-juste">Page du Labo de l&#x27;ESS</a></dd><dt>Licence</dt><dd>Non vérifiée. La transcription automatique utilisée reste privée.</dd><dt>Ce qu'elle soutient</dt><dd>La « maturité coopérative » ; l&#x27;évaluation comme « où on en est de notre façon de faire ensemble » ; l&#x27;essoufflement d&#x27;une commission après son lancement.</dd></dl></article><article class="f"><p class="k k-explicite">Cité dans l'artefact</p>
+<h3>Carte blanche « L&#x27;éducation populaire au service de la transition écologique juste »</h3>
+<dl><dt>Auteur</dt><dd>David Cluzeau (Hexopée)</dd><dt>Date</dt><dd>octobre 2025</dd><dt>Nature</dt><dd>Texte d&#x27;intervention</dd><dt>Où la trouver</dt><dd><a href="https://www.lelabo-ess.org/system/files/inline-files/Carte%20blanche_David%20Cluzeau_L%27%C3%A9ducation%20populaire%20au%20service%20de%20la%20transition%20%C3%A9cologique%20juste.pdf">PDF du Labo de l&#x27;ESS</a></dd><dt>Licence</dt><dd>Non vérifiée.</dd><dt>Ce qu'elle soutient</dt><dd>Le frein politique : des démarches participatives qui échappent en partie aux institutions.</dd></dl></article><article class="f"><p class="k k-explicite">Cité dans l'artefact</p>
+<h3>Formation-action « Réussir la transition écologique juste avec l&#x27;ESS et l&#x27;éducation populaire »</h3>
+<dl><dt>Auteur</dt><dd>Le Labo de l&#x27;ESS, e-graine, La Fabrique des transitions, avec la Fondation Crédit Coopératif</dd><dt>Date</dt><dd>4 modules, du 20 novembre 2026 au 5 février 2027</dd><dt>Nature</dt><dd>Programme</dd><dt>Où la trouver</dt><dd><a href="https://www.lelabo-ess.org/l-education-populaire-au-service-de-la-transition-ecologique-juste">Programme et publications</a></dd><dt>Licence</dt><dd>Non vérifiée.</dd><dt>Ce qu'elle soutient</dt><dd>Le cadre dans lequel notre groupe s&#x27;est constitué : candidater à 2 à 4 personnes d&#x27;un même territoire.</dd></dl></article></div></section><section class="tiroir" id="implicite" style="--c:var(--a3)"><h2><span class="tab">Ce qui est dans l&#x27;artefact sans y être nommé</span></h2><div class="grid"><article class="f"><p class="k k-implicite">Implicite dans l'artefact</p>
+<h3>« Réussir une transition écologique juste. Pour faire de l&#x27;écologie un projet d&#x27;émancipation avec l&#x27;ESS »</h3>
+<dl><dt>Auteur</dt><dd>Le Labo de l&#x27;ESS</dd><dt>Date</dt><dd>mars 2023</dd><dt>Nature</dt><dd>Étude (version résumée)</dd><dt>Où la trouver</dt><dd><a href="https://www.lelabo-ess.org/system/files/2023-03/2023%20EUCO_TEJ%20WEB_1.pdf">PDF du Labo de l&#x27;ESS</a></dd><dt>Licence</dt><dd>Non vérifiée.</dd><dt>Ce qu'elle soutient</dt><dd>La définition de la transition écologique juste reprise par toute la démarche.</dd></dl></article><article class="f"><p class="k k-implicite">Implicite dans l'artefact</p>
+<h3>Diagnostics territoriaux de Bergerac, Dunkerque et Strasbourg</h3>
+<dl><dt>Auteur</dt><dd>Étude-action 2024-2025</dd><dt>Date</dt><dd>2025</dd><dt>Nature</dt><dd>Diagnostics</dd><dt>Où la trouver</dt><dd><a href="https://www.lelabo-ess.org/l-education-populaire-au-service-de-la-transition-ecologique-juste">Page du Labo de l&#x27;ESS</a></dd><dt>Licence</dt><dd>Non vérifiée.</dd><dt>Ce qu'elle soutient</dt><dd>Les territoires pilotes dont viennent les constats, dont l&#x27;exemple de Bergerac.</dd></dl></article><article class="f"><p class="k k-implicite">Implicite dans l'artefact</p>
+<h3>« L&#x27;éducation populaire, une exigence du 21e siècle »</h3>
+<dl><dt>Auteur</dt><dd>CESE, rapporteurs Christian Chevalier et Jean-Karl Deschamps</dd><dt>Date</dt><dd>28 mai 2019</dd><dt>Nature</dt><dd>Avis</dd><dt>Où la trouver</dt><dd><a href="https://www.lecese.fr/sites/default/files/pdf/Avis/2019/2019_12_education_populaire.pdf">PDF du CESE</a></dd><dt>Licence</dt><dd>Document public.</dd><dt>Ce qu'elle soutient</dt><dd>La caractérisation de l&#x27;éducation populaire sur laquelle s&#x27;appuie la note de 2023.</dd></dl></article></div></section><section class="tiroir" id="associativite" style="--c:var(--a4)"><h2><span class="tab">L&#x27;associativité</span></h2><div class="grid"><article class="f"><p class="k k-explicite">Cité dans l'artefact</p>
+<h3>« La loi de 1901 n&#x27;a pas besoin d&#x27;être réformée, elle a besoin d&#x27;être honorée »</h3>
+<dl><dt>Auteur</dt><dd>Tribune collective, seize signataires dont la Fondation de France, le Mouvement associatif, le CNAJEP et Hexopée</dd><dt>Date</dt><dd>La Croix, 1er juillet 2026 ; relayée par la Fondation de France le 2 juillet 2026</dd><dt>Nature</dt><dd>Tribune</dd><dt>Où la trouver</dt><dd><a href="https://www.fondationdefrance.org/fr/cat-developper-la-philanthropie/la-france-qui-se-bat-celebrons-ce-qui-nous-lie-et-nous-unit">Page de la Fondation de France</a></dd><dt>Licence</dt><dd>Non vérifiée.</dd><dt>Ce qu'elle soutient</dt><dd>La citation ; les chiffres de la fragilité associative.</dd></dl></article><article class="f"><p class="k k-implicite">Implicite dans l'artefact</p>
+<h3>« La France qui (se) bat »</h3>
+<dl><dt>Auteur</dt><dd>Le Mouvement associatif et France générosités</dd><dt>Date</dt><dd>lancée le 4 juin 2026</dd><dt>Nature</dt><dd>Campagne</dd><dt>Où la trouver</dt><dd><a href="https://www.fondationdefrance.org/fr/cat-developper-la-philanthropie/la-france-qui-se-bat-tous-unis-pour-les-associations">Page de la Fondation de France</a></dd><dt>Licence</dt><dd>Non vérifiée.</dd><dt>Ce qu'elle soutient</dt><dd>Le contexte des 125 ans de la loi, d&#x27;où vient la tribune.</dd></dl></article><article class="f"><p class="k k-implicite">Implicite dans l'artefact</p>
+<h3>Loi du 1er juillet 1901 relative au contrat d&#x27;association</h3>
+<dl><dt>Auteur</dt><dd>Fiche de Vie publique</dd><dt>Date</dt><dd>1901</dd><dt>Nature</dt><dd>Texte de loi (fiche)</dd><dt>Où la trouver</dt><dd><a href="https://www.vie-publique.fr/fiches/24087-la-loi-du-1er-juillet-1901-relative-au-contrat-dassociation">Fiche Vie publique</a></dd><dt>Licence</dt><dd>Document public.</dd><dt>Ce qu'elle soutient</dt><dd>Le cadre que la tribune demande d&#x27;honorer. L&#x27;associativité informelle, elle, n&#x27;en relève pas.</dd></dl></article></div></section>
+</div>
+</main>
+
+<section class="band alt">
+<div class="wrap cols">
+<div>
+<h2 class="sec">Comment la mallette est tenue</h2>
+<ul class="l">
+<li><strong>Pointer plutôt que déposer.</strong> Les documents restent chez leurs auteurs. La mallette les décrit et renvoie vers eux ; elle ne dépose une copie que si la licence le permet.</li>
+<li><strong>Dans les deux sens.</strong> Chaque fiche dit ce qu'elle soutient dans l'artefact, et l'artefact renvoie ici pour ses sources.</li>
+<li><strong>Sans noms.</strong> Les membres du groupe n'apparaissent que par leurs fonctions. Ses traces de travail ne sont pas ici.</li>
+<li><strong>Autonome.</strong> Deux pages HTML, sans police ni bibliothèque distante : la mallette peut être copiée, déplacée, lue hors ligne.</li>
+</ul>
+</div>
+<div>
+<h2 class="sec">Ce qui manque encore</h2>
+<ul class="l">
+<li>Les licences des documents du Labo de l'ESS, d'e-graine et de la Fabrique des transitions, à commencer par celle du schéma des 4 fantastiques.</li>
+<li>Le lien de la tribune de David Cluzeau « Et si on considérait l'éducation populaire comme clé de voûte d'une transition juste ? ».</li>
+<li>Une source pour la notion de polycrises, employée ici dans nos propres mots.</li>
+<li>Le texte consolidé de la loi de 1901 sur Légifrance, à ajouter à côté de la fiche Vie publique.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<footer class="band">
+<div class="wrap">
+<p>Foyer : un groupe local de la formation-action « Réussir la transition écologique juste avec l'ESS et l'éducation populaire », lisière Sud Berry/Creuse. Échéance : le module 4, le 5 février 2027.</p>
+<p>Ce que la mallette apporte au groupe : un appui pour se regarder coopérer, et des sources vérifiables pour en discuter. Ce que le groupe apporte à la mallette : une situation réelle qui met le modèle à l'épreuve.</p>
+<p>État au 23 novembre 2026. Document de travail : des hypothèses à discuter, pas des conclusions. Licence CC BY-SA 4.0.</p>
+</div>
+</footer>
+</body>
+</html>

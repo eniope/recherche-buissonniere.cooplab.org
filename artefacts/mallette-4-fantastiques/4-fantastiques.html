@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Les 4 fantastiques et nous</title>
+<style>
+/* VOICE everyday, un support de travail pour un petit groupe, calme et net
+   IDEA la planche de formation : un schéma à quatre cases et un centre, qu'on retourne pour voir notre cas
+   PICTURE le carré des 4 fantastiques, avec des jetons-personnes qui se déplacent quand on passe du modèle à notre situation
+   COLOUR blanc, encre bleu nuit, quatre couleurs de figures (bleu, orange, violet, ocre), le centre en encre
+   TYPE Archivo 800 pour titres et étiquettes, Source Serif 4 pour le texte
+   LAYOUT laptop : titre et bascule en haut, carré à gauche, fiche de la figure à droite ; téléphone : titre, carré, fiche */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#10161d);--ink:light-dark(#14202b,#e8edf2);--soft:light-dark(#5a6774,#9aa7b4);--line:light-dark(#d9dfe5,#2a3540);--elu:light-dark(#2350c8,#86a3ff);--tor:light-dark(#d9481a,#ff8c5e);--eta:light-dark(#6b5ca8,#b0a4e6);--cho:light-dark(#a87a06,#e3b851);--panel:light-dark(#f4f6f8,#18212b)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:17px/1.55 "Source Serif 4",Georgia,serif;overflow-x:clip}
+h1,h2,h3,.lab,button{font-family:Archivo,system-ui,sans-serif}
+.band{padding-block:clamp(24px,4vw,56px);padding-inline:max(5vw,16px)}
+.wrap{max-width:1180px;margin-inline:auto}
+h1{font-size:clamp(32px,5vw,50px);line-height:1.05;letter-spacing:-.02em;margin:0 0 12px;font-weight:800;text-wrap:balance}
+.intro{max-width:62ch;margin:0 0 20px;color:var(--soft)}
+.toggle{display:inline-flex;border:2px solid var(--ink);border-radius:999px;padding:3px;gap:3px;flex-wrap:wrap}
+.toggle button{min-height:44px;padding:0 20px;border:0;border-radius:999px;background:transparent;color:var(--ink);font-size:15px;font-weight:700;cursor:pointer}
+.toggle button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.toggle button:focus-visible,.card:focus-visible,.centre:focus-visible{outline:3px solid var(--tor);outline-offset:2px}
+.stage{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(20px,3vw,40px);margin-top:24px;align-items:start}
+.quad{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:1fr 1fr;aspect-ratio:1/1;min-height:460px;gap:4px}
+.card{--c:var(--elu);position:relative;background:color-mix(in srgb,var(--c) 13%,var(--bg));border:2px solid color-mix(in srgb,var(--c) 55%,var(--bg));padding:12px 14px;cursor:pointer;transition:border-style .2s}
+.card[data-k=tor]{--c:var(--tor);text-align:right}
+.card[data-k=eta]{--c:var(--eta);display:flex;flex-direction:column;justify-content:flex-end}
+.card[data-k=cho]{--c:var(--cho);display:flex;flex-direction:column;justify-content:flex-end;text-align:right}
+.card.on{border-color:var(--c);box-shadow:inset 0 0 0 2px var(--c)}
+.name{font:800 17px/1.15 Archivo,sans-serif;color:var(--c);display:block}
+.role{font:500 13px/1.3 Archivo,sans-serif;color:var(--soft);display:block}
+.s-only{display:none}
+.sit .m-only{display:none}
+.sit .s-only{display:inline}
+.sit .card[data-k=eta],.sit .card[data-k=cho]{border-style:dashed;background:color-mix(in srgb,var(--c) 6%,var(--bg))}
+.centre{position:absolute;left:50%;top:50%;width:min(31%,180px);aspect-ratio:1/1;transform:translate(-50%,-50%);border-radius:50%;background:var(--bg);border:2px solid var(--ink);display:grid;place-items:center;text-align:center;padding:10px;cursor:pointer;z-index:1}
+.centre.on{box-shadow:0 0 0 4px color-mix(in srgb,var(--ink) 25%,transparent)}
+.centre .lab{font-size:13px;line-height:1.2;font-weight:700}
+.sit .centre .lab{opacity:0}
+.tok{position:absolute;z-index:2;transform:translate(-50%,-50%);max-width:min(44%,150px);padding:6px 10px;border-radius:12px;background:var(--bg);border:2px solid var(--ink);font:700 13px/1.2 Archivo,sans-serif;text-align:center;pointer-events:none;transition:left .7s cubic-bezier(.3,.7,.2,1),top .7s cubic-bezier(.3,.7,.2,1),opacity .4s,background .4s}
+.tok.duo{background:linear-gradient(90deg,color-mix(in srgb,var(--elu) 22%,var(--bg)) 50%,color-mix(in srgb,var(--tor) 22%,var(--bg)) 50%)}
+.tok.hid{opacity:0}
+.sit .quad{outline:3px solid var(--tor);outline-offset:5px}
+.cap{font:500 14px/1.35 Archivo,sans-serif;color:var(--tor);margin:0 0 12px;display:none}
+.sit .cap{display:block}
+.out{margin-top:10px;min-height:56px;border:2px dashed var(--line);border-radius:12px;padding:8px 12px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--soft);opacity:.35;transition:opacity .4s}
+.sit .out{opacity:1}
+.quote{border-left:6px solid var(--tor);padding:6px 0 6px 18px;margin:0 0 18px;font-size:clamp(20px,2.4vw,26px);line-height:1.3;font-weight:600}
+.quote cite{display:block;font:500 14px/1.4 Archivo,sans-serif;color:var(--soft);font-style:normal;margin-top:8px}
+.claim{background:var(--ink);color:var(--bg);border-radius:14px;padding:clamp(18px,2.5vw,26px);margin-top:20px}
+.claim h3{margin:0 0 8px;font-size:20px;line-height:1.2}
+.claim p{margin:0}
+.fig-n{white-space:nowrap;font-weight:600}
+.out b{font:700 13px/1.2 Archivo,sans-serif;color:var(--ink);border:2px dashed var(--ink);border-radius:12px;padding:6px 10px}
+.panel{background:var(--panel);border-radius:14px;padding:clamp(18px,2.5vw,28px);border-top:6px solid var(--pc,var(--ink))}
+.panel h2{font-size:clamp(24px,3vw,32px);line-height:1.1;margin:0 0 4px;letter-spacing:-.01em}
+.panel .sub{font:500 14px/1.3 Archivo,sans-serif;color:var(--soft);margin:0 0 16px}
+.panel dl{margin:0;display:grid;gap:14px}
+.panel dt{font:700 14px/1.2 Archivo,sans-serif;color:var(--pc,var(--ink))}
+.panel dd{margin:3px 0 0}
+.hint{font-size:14px;color:var(--soft);margin:12px 0 0}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(20px,3vw,40px)}
+h2.sec{font-size:clamp(24px,3vw,30px);line-height:1.1;margin:0 0 14px;letter-spacing:-.01em}
+ol.q,ul.ap{margin:0;padding-left:1.2em;display:grid;gap:10px}
+.alt{background:var(--panel)}
+footer{font-size:14px;color:var(--soft)}
+footer p{margin:0 0 6px;max-width:80ch}
+.back{margin:0 0 14px;font:600 15px/1.3 Archivo,system-ui,sans-serif}
+.back a,footer a{color:inherit}
+@media(max-width:820px){.stage{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.quad{aspect-ratio:auto;height:520px;min-height:0}.name{font-size:15px}.card{padding:10px}}
+@media(prefers-reduced-motion:reduce){.tok,.out,.centre .lab{transition:none}}
+</style>
+</head>
+<body>
+<header class="band">
+<div class="wrap">
+<p class="back"><a href="./">Retour à la mallette</a></p>
+<h1>Les 4 fantastiques, et notre petit groupe</h1>
+<p class="intro">La Fabrique des transitions décrit la coopération territoriale avec quatre figures, chacune portée par une personne, autour d'enjeux communs. Basculez du modèle à notre situation : les personnes se déplacent, certaines cases se vident, le centre prend un visage. Touchez une case pour lire ce qui se joue.</p>
+<div class="toggle" role="group" aria-label="Vue">
+<button id="b-mod" aria-pressed="true">Le modèle</button>
+<button id="b-sit" aria-pressed="false">Notre situation</button>
+</div>
+
+<div class="stage">
+<div>
+<p class="cap">Le trait orange autour du carré : l'associativité, loi 1901 ou informelle, traverse toutes les cases.</p>
+<div class="quad" id="quad">
+<div class="card" data-k="elu" tabindex="0" role="button"><span class="name">Mister Fantastique</span><span class="role">l'élu</span></div>
+<div class="card" data-k="tor" tabindex="0" role="button"><span class="name">La Torche</span><span class="role"><span class="m-only">l'acteur socio-économique</span><span class="s-only">partout : chacun en est</span></span></div>
+<div class="card" data-k="eta" tabindex="0" role="button"><span class="name">La Femme Invisible</span><span class="role"><span class="m-only">l'État</span><span class="s-only">absente du groupe, présente par ses effets</span></span></div>
+<div class="card" data-k="cho" tabindex="0" role="button"><span class="name">La Chose</span><span class="role"><span class="m-only">l'agent</span><span class="s-only">personne en titre</span></span></div>
+<div class="centre" data-k="cen" tabindex="0" role="button"><span class="lab">Enjeux communs, sans visage</span></div>
+<div class="tok" id="t-a"></div>
+<div class="tok" id="t-b"></div>
+<div class="tok" id="t-c"></div>
+<div class="tok" id="t-d"></div>
+<div class="tok" id="t-e"></div>
+</div>
+<div class="out" aria-label="Hors du cadre de la formation"><span>Hors du cadre de la formation :</span><b>d'autres personnes, places à préciser</b></div>
+</div>
+<aside class="panel" id="panel" aria-live="polite"></aside>
+</div>
+</div>
+</header>
+
+<section class="band alt">
+<div class="wrap cols">
+<div>
+<h2 class="sec">Ce que notre situation déplace</h2>
+<ul class="ap">
+<li><strong>L'associativité partout.</strong> La Torche n'est pas une case parmi d'autres : elle traverse tout le groupe. Chacun est engagé dans des associations loi 1901 ou dans des collectifs informels, élus compris.</li>
+<li><strong>Plusieurs figures par personne.</strong> Le modèle donne une figure à chacun. Chez nous, deux membres sont à la fois élus et engagés dans le monde associatif : les attentes croisées se jouent aussi à l'intérieur de chacun.</li>
+<li><strong>Une case vide, La Chose.</strong> Aucun agent ne structure dans la durée. Dans les petites communes rurales, ce travail retombe souvent sur les élus et les bénévoles.</li>
+<li><strong>Une figure absente qui pèse.</strong> Les échelons au-dessus de la commune ne sont pas dans le groupe, mais leurs financements, leurs normes et leurs équilibres politiques sont là.</li>
+<li><strong>Un centre qui a un visage.</strong> Les temps réflexifs et l'évaluation, que le modèle laisse au milieu, sont tenus par un membre, habitant-chercheur.</li>
+<li><strong>Un groupe qui s'organise hors du cadre.</strong> Un espace de discussion en ligne propre au groupe, et d'autres personnes que la formation ne connaît pas.</li>
+</ul>
+</div>
+<div>
+<h2 class="sec">Quatre questions pour nous regarder faire</h2>
+<ol class="q">
+<li>Dans nos échanges, quelle casquette parle, et à quel moment ?</li>
+<li>Qui fait le travail de La Chose (relances, traces, continuité), et à quel prix en temps ?</li>
+<li>Que devient le centre quand c'est l'un de nous qui le tient ? Est-il partagé, ou porté par un seul ?</li>
+<li>Quand ce qui coince menace d'abord notre capacité à penser ensemble, comment la protégeons-nous ?</li>
+</ol>
+</div>
+</div>
+</section>
+
+<section class="band">
+<div class="wrap cols">
+<div>
+<h2 class="sec">Ce qui coince, ce qui freine</h2>
+<ul class="ap">
+<li><strong>L'argent.</strong> Modèles hybrides, appels à projets chronophages, concurrence entre acteurs pour les mêmes financements (note stratégique 2023, rapport 2025).</li>
+<li><strong>Le politique.</strong> Méfiance ou désintérêt d'institutions envers des démarches participatives qui leur échappent en partie (carte blanche de David Cluzeau, 2025).</li>
+<li><strong>Le temps.</strong> L'urgence des crises contre le temps long de l'apprentissage, des mandats courts, le temps propre des habitants. Vouloir inclure ne doit pas tourner à l'injonction à participer (note 2023).</li>
+<li><strong>Le cloisonnement.</strong> Entre services, entre ESS et éducation populaire, parfois avec de la défiance (rapport 2025).</li>
+<li><strong>La fragilité associative.</strong> <span class="fig-n">31 %</span> des associations employeuses ont moins de trois mois de trésorerie, <span class="fig-n">60 %</span> n'ont pas de visibilité au-delà d'un an, et la part des subventions publiques dans leurs ressources a baissé de <span class="fig-n">41 %</span> entre 2005 et 2020 (tribune de juillet 2026). On les appelle « les matins de crise », puis on les oublie.</li>
+</ul>
+</div>
+<div>
+<blockquote class="quote">« La loi de 1901 n'a pas besoin d'être réformée, elle a besoin d'être honorée. »<cite>Tribune collective parue dans La Croix le 1er juillet 2026, pour les 125 ans de la loi, relayée par la Fondation de France. Seize signataires, dont la Fondation de France, le Mouvement associatif, le CNAJEP et Hexopée.</cite></blockquote>
+<p>Si l'associativité, déclarée ou informelle, tient déjà le groupe et traverse chaque figure, la question n'est pas de lui inventer un cadre, mais de reconnaître celui qui existe. Ce qui la fragilise nous touche donc directement, et pas seulement les structures employeuses : les collectifs informels vivent aussi de temps donné, de lieux prêtés, de confiance.</p>
+<div class="claim">
+<h3>Ce que nous proposons de mettre en jeu</h3>
+<p>Ces menaces ne pèsent pas seulement sur les moyens d'agir. Elles pèsent sur notre capacité à penser ensemble l'œuvre à faire pour faire face aux polycrises. Cette capacité fait partie des enjeux de la réussite d'une transition écologique juste. Elle demande d'être cultivée et protégée, comme une ressource commune.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="band">
+<div class="wrap">
+<h2 class="sec">Ce que la formation dit de « faire groupe »</h2>
+<ul class="ap">
+<li>« Ce sont toujours des personnes qui coopèrent, ou pas. » Le cadre formel ne suffit pas sans postures personnelles et sans espaces sécurisés pour les désaccords (rapport d'étude-action, 2025, étape 2).</li>
+<li>La confiance est un préalable, mais il faut aussi travailler sa « maturité coopérative » et accepter de montrer ses vulnérabilités (restitution du 8 octobre 2025).</li>
+<li>La parole de professionnels et d'élus se détache difficilement de leur fonction : il faut ajuster les postures (note stratégique, 2023).</li>
+<li>Durer est plus difficile que lancer. L'évaluation peut servir à dire « où on en est de notre façon de faire ensemble » (restitution du 8 octobre 2025).</li>
+</ul>
+</div>
+</section>
+
+<footer class="band">
+<div class="wrap">
+<p>Modèle : La Fabrique des transitions, « Attentes et enjeux croisés des 4 fantastiques pour mieux coopérer ». Sources citées : Labo de l'ESS, e-graine et La Fabrique des transitions, note stratégique (2023), rapport « Retour d'expériences croisées des territoires » (2025), restitution du 8 octobre 2025, carte blanche de David Cluzeau (2025). Tribune collective « La loi de 1901 n'a pas besoin d'être réformée, elle a besoin d'être honorée », La Croix, 1er juillet 2026, relayée par la Fondation de France le 2 juillet 2026.</p>
+<p>Lecture d'un groupe local de la formation-action « Réussir la transition écologique juste avec l'ESS et l'éducation populaire », novembre 2026. Document de travail : des hypothèses à discuter, pas des conclusions.</p>
+<p>Chaque source a sa fiche dans <a href="./#ressources">la mallette</a> : où la trouver, sa licence, et ce qu'elle soutient ici.</p>
+<p>Licence CC BY-SA.</p>
+</div>
+</footer>
+
+<script>
+{
+const D={
+elu:{n:"Mister Fantastique",r:"l'élu",c:"--elu",
+ m:"Le chef d'orchestre de la collectivité : il fixe le cap et arbitre. Il a le bras long, enjambe les clivages, reste souple et agile.",
+ s:"Deux membres sont élus de communes rurales. Chacun porte aussi une autre figure, du côté de La Torche.",
+ o:"Quand l'un d'eux parle, est-ce l'élu ou l'associatif ? La parole se détache mal de la fonction."},
+tor:{n:"La Torche",r:"l'acteur socio-économique",c:"--tor",
+ m:"La dynamique territoriale : ESS, associations, collectifs de citoyens organisés. Elle a l'expertise d'usage, challenge les acteurs publics et les interpelle.",
+ s:"Ce n'est pas une case parmi d'autres : elle traverse tout le groupe. Chacun est engagé dans des associations loi 1901 ou dans des collectifs informels : un directeur d'association d'éducation populaire, un maire engagé dans des collectifs locaux, un habitant-chercheur côté citoyen.",
+ o:"Si l'associativité est partout, qu'est-ce qui la rend visible et reconnue, au-delà d'une case ? Et quand La Torche et l'élu logent dans la même personne, qui interpelle qui ?"},
+eta:{n:"La Femme Invisible",r:"l'État",c:"--eta",
+ m:"Partout, sous plusieurs formes. Elle crée des champs de forces parfois invisibles et contrôle l'application des normes. C'est la figure tutélaire.",
+ s:"Aucun membre ne la porte. Elle pèse pourtant, par les échelons au-dessus de la commune : financements, appels à projets, normes, équilibres politiques.",
+ o:"Où la sent-on dans nos échanges sans qu'elle soit nommée ?"},
+cho:{n:"La Chose",r:"l'agent",c:"--cho",
+ m:"Il s'appuie sur son expertise technique pour structurer les projets décidés par l'exécutif. Il incarne la force du long terme et garantit la réalisation.",
+ s:"Personne n'occupe cette place en titre. Dans les petites communes, ce travail retombe souvent sur les élus et les bénévoles. Le groupe a pourtant besoin de relances, de traces et de continuité.",
+ o:"Qui fait ce travail, et à quel prix en temps ?"},
+cen:{n:"Le centre",r:"enjeux et attentes communs",c:"--ink",
+ m:"Être formé à la conduite du changement. Montrer que la coopération est un gain sur le long terme. Ouvrir des temps et des espaces réflexifs, faire de l'évaluation. Porter un discours commun. Reconnaître le droit à l'expérimentation. Aucune figure n'en a la charge.",
+ s:"Le centre a un visage : un habitant-chercheur, dont l'objet de recherche est justement l'évaluation comme milieu réflexif. Le groupe s'observe de l'intérieur. Nous y ajoutons un enjeu : notre capacité à penser ensemble l'œuvre à faire face aux polycrises.",
+ o:"Que devient le centre quand c'est l'un de nous qui le tient ? Est-il partagé, ou porté par un seul ?"}
+};
+const T={
+mod:{a:[24,31,"un élu",""],b:[76,31,"un acteur socio-économique",""],c:[24,69,"un représentant de l'État",""],d:[76,69,"un agent",""],e:[50,50,"",'hid']},
+sit:{a:[50,19,"un maire, engagé dans des collectifs locaux","duo"],b:[50,35,"un directeur d'association, élu délégué","duo"],c:[24,69,"",'hid'],d:[76,69,"",'hid'],e:[50,50,"un habitant-chercheur",""]}
+};
+const root=document.documentElement,panel=document.getElementById('panel'),bm=document.getElementById('b-mod'),bs=document.getElementById('b-sit');
+let mode='mod',sel='cen';
+const place=()=>{for(const k of ['a','b','c','d','e']){const [x,y,txt,cls]=T[mode][k],el=document.getElementById('t-'+k);el.style.left=x+'%';el.style.top=y+'%';if(txt)el.textContent=txt;el.className='tok'+(cls?' '+cls:'')}};
+const show=()=>{const f=D[sel];panel.style.setProperty('--pc','var('+f.c+')');
+ panel.innerHTML='<h2>'+f.n+'</h2><p class="sub">'+f.r+'</p><dl><dt>Le modèle dit</dt><dd>'+f.m+'</dd>'+(mode==='sit'?'<dt>Chez nous</dt><dd>'+f.s+'</dd><dt>À observer</dt><dd>'+f.o+'</dd>':'')+'</dl>'+(mode==='mod'?'<p class="hint">Passez à « Notre situation » pour voir ce qui se déplace ici.</p>':'');
+ document.querySelectorAll('[data-k]').forEach(e=>e.classList.toggle('on',e.dataset.k===sel))};
+const setMode=m=>{mode=m;document.body.classList.toggle('sit',m==='sit');bm.setAttribute('aria-pressed',m==='mod');bs.setAttribute('aria-pressed',m==='sit');place();show()};
+bm.addEventListener('click',()=>setMode('mod'));
+bs.addEventListener('click',()=>setMode('sit'));
+document.querySelectorAll('[data-k]').forEach(e=>{const go=()=>{sel=e.dataset.k;show()};e.addEventListener('click',go);e.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();go()}})});
+setMode('mod');
+}
+</script>
+</body>
+</html>
